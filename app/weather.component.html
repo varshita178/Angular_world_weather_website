@@ -1,0 +1,47 @@
+<body style="background: peachpuff;" >
+<div class="container" >
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-center   my-4 "><i>Search For Weather</i></h3>
+
+      <form
+        [formGroup]="weatherSearchForm"
+        (ngSubmit)="sendToAPIXU(weatherSearchForm.value)"
+      >
+        <div class="form-group">
+          <input
+            style="border-top:none ; border-left: none; border-right: none;"
+            class="form-control"
+            type="text"
+            id="weatherLocation"
+            aria-describedby="weatherLocatio"
+            placeholder="Please input a Location "
+            formControlName="location"
+          />
+          
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success btn-md" style="background-color: #307de3; border: none;">
+            Search for the weather
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h3 class="text-center  my-4">
+        Weather Details
+      </h3>
+      <p class="text-center">
+        Feels Like: {{ this.weatherData?.current.feelslike }}
+      </p>
+      <p class="text-center">
+        Cloud Cover: {{ this.weatherData?.current.cloudcover }}
+      </p>
+
+      <p class="text-center">
+        Location Searched: {{ this.weatherData?.location.name }}
+      </p>
+    </div>
+  </div>
+</div>
+</body>
