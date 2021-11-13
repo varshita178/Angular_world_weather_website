@@ -1,6 +1,7 @@
-# WeatherApplic
+# WorldWeatherApplication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+This respiratory consists of version controlled world weather reporting angular website.
 
 ## Development server
 
